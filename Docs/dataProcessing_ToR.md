@@ -35,4 +35,4 @@ Ideally we should collect all the required metadata info to be able to create a 
 - Extract, programmatically if possible (yes, in the case of a geoserver) the metadata records  
 - Record the metadata into  a JSON file  
 
-For the occurrence (DwC) data, create the corresponding EML (XML) file. Need a template for this with the mandatory fields.
+For the occurrence (DwC) data, create the corresponding EML (XML) file. Need a template for this with the mandatory fields. See the EML in the [OBIS manual](https://manual.obis.org/eml)
