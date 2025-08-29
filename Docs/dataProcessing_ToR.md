@@ -36,3 +36,44 @@ Ideally we should collect all the required metadata info to be able to create a 
 - Record the metadata into  a JSON file  
 
 For the occurrence (DwC) data, create the corresponding EML (XML) file. Need a template for this with the mandatory fields. See the EML in the [OBIS manual](https://manual.obis.org/eml)
+
+## flowchart
+
+```mermaid
+flowchart TD
+    subgraph Datasets
+        DS1[Dataset 1]
+        DS2[Dataset 2]
+        DS3[Dataset 3]
+        DS4[Dataset ...]
+    end
+    subgraph Explore_the_Dataset
+        A1[Identify Access Point]
+        A11[Download the Data]
+        A2[Document Schema]
+        A3[Document Metadata]
+
+        P1(JSON Schema)
+        P2(XML file)
+    end
+
+    subgraph Transformation
+        B1[Create DwC File]
+        B2[Create EML File]
+        B3[Create a CSV file]
+    end
+    
+    Datasets --> Explore_the_Dataset
+    A1 --> A11
+    A11 --> A2
+    A11 --> A3
+    A2 --> P1
+    A3 --> P2
+
+    Explore_the_Dataset --> Transformation
+
+    classDef lightGreen fill:#d4f4dd,stroke:#333,stroke-width:1px;
+    class Datasets,Explore_the_Dataset,Transformation lightGreen;
+
+    
+```
