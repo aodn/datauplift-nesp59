@@ -16,26 +16,26 @@ In a table (similar to what Ben has). Maybe create a clean template in excel to 
 
 ### Download the data an explore it 
 
-- Verify and tabluate contains the minimum required fields:
-    - (lat/lon)/geometry + CRS
-    - timestamp
-    - species
-    - species encoding (one hot encoded, array delimited)
-    - species taxon mapping to WoRMS
+#### Verify and tabluate contains the minimum required fields:
+- (lat/lon)/geometry + CRS
+- timestamp
+- species
+- species encoding (one hot encoded, array delimited)
+- species taxon mapping to WoRMS
  
-- Implement ETL for the data source if the data source is valid:
+#### Implement ETL for the data source if the data source is valid:
 
-    - Extract:
-        - Input data validation
-          
-    - Transform:
-        - Dates to `YYYY-MM-DD` (ISO 8601 date)
-        - Map species to WoRMS
-        - Project location data to EPSG:4326 (if required)
-        - Model to fit Darwin Core
-     
-    - Load:
-        - Save to a Darwin Core file
+- Extract:
+    - Input data validation
+      
+- Transform:
+    - Dates to `YYYY-MM-DD` (ISO 8601 date)
+    - Map species to WoRMS
+    - Project location data to EPSG:4326 (if required)
+    - Model to fit Darwin Core
+ 
+- Load:
+    - Save to a Darwin Core file
 
 ## Metadata 
 
