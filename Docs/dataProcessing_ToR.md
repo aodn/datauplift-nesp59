@@ -15,7 +15,12 @@ In a table (similar to what Ben has). Maybe create a clean template in excel to 
 
 ### Download the data an explore it 
 
-- Verify contains the minimum required fields: lat/lon/geometry, timestamp  
+- Verify and tabluate contains the minimum required fields:
+    - (lat/lon)/geometry + CRS
+    - timestamp
+    - species
+    - species encoding (one hot encoded, array delimited)
+    - species taxon mapping to WoRMS
 - Create a JSON file (preferable with a Python script) with the schema of the table (Tom to provide guidelines here)  
 - Upload the data and the schema to someplace (S3? Onedrive folder? TBD)  
 
