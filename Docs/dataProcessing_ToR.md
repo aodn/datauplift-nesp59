@@ -9,7 +9,8 @@ In a table (similar to what Ben has). Maybe create a clean template in excel to 
 - Name of the dataset  
 - Access point for download   
 - Access method (API, HTTP server, manual, email, etc)   
-- Point of contact: Name, Organisation, email address 
+- Point of contact: Name, Organisation, email address
+- Minimum data requirements (more below)
 - ...
 
 
@@ -21,17 +22,20 @@ In a table (similar to what Ben has). Maybe create a clean template in excel to 
     - species
     - species encoding (one hot encoded, array delimited)
     - species taxon mapping to WoRMS
-- Create a JSON file (preferable with a Python script) with the schema of the table (Tom to provide guidelines here)  
-- Upload the data and the schema to someplace (S3? Onedrive folder? TBD)  
-
-If the data is occurrences (or abundance or biomase or cover) of taxonomicaly identifiable species:  
-
-- Create a code to produce a standard DwC table: 
-
-    - Create a JSON(?) dictionary to translate the actual table schema into DwC schema  
-    - Create a Python code to produce the DwC file  
-
  
+- Implement ETL for the data source if the data source is valid:
+
+    - Extract:
+        - Input data validation
+          
+    - Transform:
+        - Dates to `YYYY-MM-DD` (ISO 8601 date)
+        - Map species to WoRMS
+        - Project location data to EPSG:4326 (if required)
+        - Model to fit Darwin Core
+     
+    - Load:
+        - Save to a Darwin Core file
 
 ## Metadata 
 
