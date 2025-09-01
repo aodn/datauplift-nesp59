@@ -16,7 +16,7 @@ In a table (similar to what Ben has). Maybe create a clean template in excel to 
 
 ### Download the data an explore it 
 
-#### Verify and tabluate contains the minimum required fields:
+#### Verify contains the minimum required fields and tabluate:
 - (lat/lon)/geometry + CRS
 - timestamp
 - species
