@@ -18,7 +18,7 @@ In a table (similar to what Ben has). Maybe create a clean template in excel to 
 
 #### Verify contains the minimum required fields and tabluate:
 - (lat/lon)/geometry + CRS
-- timestamp
+- timestamp/datetime/date
 - species
 - species encoding (one hot encoded, array delimited)
 - species taxon mapping to WoRMS
